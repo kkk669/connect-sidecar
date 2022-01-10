@@ -54,7 +54,7 @@ tell application "System Events"
 				click menu bar item "Control Center" of menu bar 1
 			else
 				-- Sidecar is available, but no devices with deviceName were found.
-				display dialog "The device " & deviceName & " can't be found. Please verify the name of your iPad and update the `deviceName` variable if necessary."
+				log "The device " & deviceName & " can't be found. Please verify the name of your iPad and update the `deviceName` variable if necessary."
 			end if
 		else
 			-- A checkbox named "Connect to Sidecar" wasn't found.
@@ -78,7 +78,7 @@ tell application "System Events"
 				click menu bar item "Control Center" of menu bar 1
 			else
 				-- Sidecar isn't connected, and no devices are available to connect to. Show an error message.
-				display dialog "No Sidecar devices are in range."
+				log "No Sidecar devices are in range."
 			end if
 		end if
 	end tell
